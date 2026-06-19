@@ -243,58 +243,48 @@
     /* Team */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 8px;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      align-items: start;
     }
-    .team-card {
+
+    .team-card:not(#kostyaCard) {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius-card);
-      padding: 2px 8px 0;
+      padding: 8px 4px 6px;
       text-align: center;
-      max-width: 70%;
+      max-width: 90%;
       margin: 0 auto;
       transition: border-color .3s;
     }
-    .team-card:hover { border-color: var(--accent); }
-    .team-avatar {
-      width: 72px; height: 72px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 14px;
-      font-size: 28px;
-      color: #0a0a0a;
-      font-weight: 700;
-    }
-    .team-avatar-img {
+    .team-card:not(#kostyaCard):hover { border-color: var(--accent); }
+
+    .team-card:not(#kostyaCard) .team-avatar-img {
       width: 72px; height: 72px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 0 auto 1px;
+      margin: 0 auto 2px;
       border: 1px solid var(--border);
     }
-    .team-avatar-anime {
-      width: 72px; height: 72px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 10px;
-      border: 2px solid var(--border);
+
+    .team-card:not(#kostyaCard) h4 {
+      font-size: 15px;
+      margin: 2px 0 0;
+      padding: 0;
+      line-height: 1.2;
     }
-    .team-char-name {
-      display: block;
-      font-size: 10px;
+    .team-card:not(#kostyaCard) p {
+      font-size: 12px;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-top: 4px;
-      opacity: .6;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
     }
+
     #kostyaCard {
       border-color: var(--accent);
       box-shadow: 0 0 30px rgba(197,160,89,.2);
@@ -307,11 +297,31 @@
       justify-content: space-evenly;
       max-width: none;
       margin: 0;
+      border-radius: var(--radius-card);
     }
     #kostyaCard:hover { transform: scale(1.06); }
-    #kostyaCard .team-avatar-img { border-color: var(--accent); }
-    .team-card h4 { font-size: 15px; margin: 0; padding: 0; line-height: 1; }
-    .team-card p { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin: 0; padding: 0; line-height: 1; }
+    #kostyaCard .team-avatar-img {
+      width: 120px; height: 120px;
+      border-color: var(--accent);
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    #kostyaCard h4 {
+      color: #FFE8B0;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+    }
+    #kostyaCard p {
+      color: #FFE8B0;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+    }
 
     /* Stats */
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto; }
@@ -457,6 +467,10 @@
       .nav-links.open { right: 0; }
       .nav-cta { margin-top: 6px; }
       .section { padding: 50px 0 40px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .team-card:not(#kostyaCard) { max-width: 100%; padding: 6px 2px 4px; }
+      #kostyaCard { padding: 30px 16px; min-height: 260px; }
+      #kostyaCard .team-avatar-img { width: 80px; height: 80px; }
     }
     @media (min-width: 768px) and (max-width: 1023px) {
       .hero-grid { gap: 30px; }
@@ -615,10 +629,11 @@
           <h4>Максим</h4>
           <p>UI/UX Designer</p>
         </div>
+        <!-- Костя — без изменений -->
         <div class="team-card reveal" id="kostyaCard">
-          <img class="team-avatar-img" src="Kazuhiro_Mochizuki_anime.webp" alt="Мочизуки" style="width:120px;height:120px;border-color:var(--accent);">
-          <h4 style="color:#FFE8B0;font-size:18px;">Костя</h4>
-          <p style="color:#FFE8B0;font-weight:700;letter-spacing:1px;font-size:13px;">Топ-1 Магнус вселенной</p>
+          <img class="team-avatar-img" src="Kazuhiro_Mochizuki_anime.webp" alt="Мочизуки">
+          <h4>Костя</h4>
+          <p>Топ-1 Магнус вселенной</p>
         </div>
         <div class="team-card reveal">
           <img class="team-avatar-img" src="img_kise_mugshot.webp" alt="Кисе">
