@@ -243,9 +243,9 @@
     /* Team */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 12px;
-      align-items: start;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      align-items: stretch;
     }
 
     .team-card:not(#kostyaCard) {
@@ -254,8 +254,8 @@
       border-radius: var(--radius-card);
       padding: 8px 4px 6px;
       text-align: center;
-      max-width: 90%;
-      margin: 0 auto;
+      max-width: none;
+      margin: 0;
       transition: border-color .3s;
     }
     .team-card:not(#kostyaCard):hover { border-color: var(--accent); }
@@ -289,8 +289,8 @@
       border-color: var(--accent);
       box-shadow: 0 0 30px rgba(197,160,89,.2);
       background: linear-gradient(135deg, #8B7533, #6B5B28);
-      padding: 56px 40px 48px;
-      min-height: 380px;
+      padding: 22px 32px;
+      min-height: 250px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -301,12 +301,12 @@
     }
     #kostyaCard:hover { transform: scale(1.06); }
     #kostyaCard .team-avatar-img {
-      width: 120px; height: 120px;
+      width: 96px; height: 96px;
       border-color: var(--accent);
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 0 auto 10px;
+      margin: 0 auto 8px;
     }
     #kostyaCard h4 {
       color: #FFE8B0;
@@ -469,11 +469,12 @@
       .section { padding: 50px 0 40px; }
       .team-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .team-card:not(#kostyaCard) { max-width: 100%; padding: 6px 2px 4px; }
-      #kostyaCard { padding: 30px 16px; min-height: 260px; }
+      #kostyaCard { padding: 20px 12px; min-height: 220px; }
       #kostyaCard .team-avatar-img { width: 80px; height: 80px; }
     }
     @media (min-width: 768px) and (max-width: 1023px) {
       .hero-grid { gap: 30px; }
+      .team-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
     }
   </style>
 </head>
@@ -619,6 +620,11 @@
       <h2 class="section-title reveal">Наша <span>команда</span></h2>
       <p class="section-sub reveal">Профессионалы с опытом от 5 лет</p>
       <div class="team-grid">
+        <div class="team-card reveal" id="kostyaCard">
+          <img class="team-avatar-img" src="Kazuhiro_Mochizuki_anime.webp" alt="Мочизуки">
+          <h4>Костя</h4>
+          <p>Топ-1 Магнус вселенной</p>
+        </div>
         <div class="team-card reveal">
           <img class="team-avatar-img" src="img_aomine_mugshot.webp" alt="Аомине">
           <h4>Максим</h4>
@@ -628,12 +634,6 @@
           <img class="team-avatar-img" src="img_akashi_mugshot.webp" alt="Акаши">
           <h4>Максим</h4>
           <p>UI/UX Designer</p>
-        </div>
-        <!-- Костя — без изменений -->
-        <div class="team-card reveal" id="kostyaCard">
-          <img class="team-avatar-img" src="Kazuhiro_Mochizuki_anime.webp" alt="Мочизуки">
-          <h4>Костя</h4>
-          <p>Топ-1 Магнус вселенной</p>
         </div>
         <div class="team-card reveal">
           <img class="team-avatar-img" src="img_kise_mugshot.webp" alt="Кисе">
