@@ -267,6 +267,20 @@
       color: #0a0a0a;
       font-weight: 700;
     }
+    .team-avatar-img {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 14px;
+      border: 2px solid var(--border);
+    }
+    #kostyaCard {
+      border-color: var(--accent);
+      box-shadow: 0 0 30px rgba(197,160,89,.2);
+      background: linear-gradient(135deg, rgba(197,160,89,.12), rgba(197,160,89,.04));
+    }
+    #kostyaCard .team-avatar-img { border-color: var(--accent); }
     .team-card h4 { font-size: 15px; margin-bottom: 4px; }
     .team-card p { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
@@ -563,27 +577,27 @@
       <p class="section-sub reveal">Профессионалы с опытом от 5 лет</p>
       <div class="team-grid">
         <div class="team-card reveal">
-          <div class="team-avatar">М</div>
+          <img class="team-avatar-img" src="https://placehold.co/80x80/1a1a3e/C5A059?text=Aomine" alt="">
           <h4>Максим</h4>
           <p>Frontend Developer</p>
         </div>
         <div class="team-card reveal">
-          <div class="team-avatar">М</div>
+          <img class="team-avatar-img" src="https://placehold.co/80x80/8B0000/C5A059?text=Akashi" alt="">
           <h4>Максим</h4>
           <p>UI/UX Designer</p>
         </div>
-        <div class="team-card reveal" style="border-color:var(--accent);box-shadow:0 0 30px rgba(197,160,89,.2);">
-          <div class="team-avatar" style="background:var(--accent-hover);width:80px;height:80px;font-size:32px;">К</div>
+        <div class="team-card reveal" id="kostyaCard">
+          <img class="team-avatar-img" src="https://placehold.co/80x80/2a1a0a/C5A059?text=Mochizuki" alt="">
           <h4 style="color:var(--accent);font-size:17px;">Костя</h4>
           <p style="color:var(--accent);font-weight:700;letter-spacing:1px;font-size:13px;">Топ-1 Магнус вселенной</p>
         </div>
         <div class="team-card reveal">
-          <div class="team-avatar">М</div>
+          <img class="team-avatar-img" src="https://placehold.co/80x80/DAA520/0a0a0a?text=Kise" alt="">
           <h4>Максим</h4>
           <p>Backend Developer</p>
         </div>
         <div class="team-card reveal">
-          <div class="team-avatar">М</div>
+          <img class="team-avatar-img" src="https://placehold.co/80x80/2E8B57/C5A059?text=Midorima" alt="">
           <h4>Максим</h4>
           <p>Project Manager</p>
         </div>
